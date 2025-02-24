@@ -17,17 +17,17 @@ mkdir -p logs
 CPU_LOAD=$(grep "load average" $LOG_FILE | awk '{print $10}')
 MEM_AVAILABLE=$(grep "Mem:" $LOG_FILE | awk '{print $7}')
 
-echo "✅ System Health Summary:"
-echo "🔹 CPU Load: $CPU_LOAD"
-echo "🔹 Memory Available: $MEM_AVAILABLE MB"
+echo "System Health Summary:"
+echo "CPU Load: $CPU_LOAD"
+echo "Memory Available: $MEM_AVAILABLE MB"
 
 # Alert if system is overloaded
 if (( $(echo "$CPU_LOAD > 1.5" | bc -l) )); then
-  echo "⚠️ High CPU Usage: $CPU_LOAD" | tee -a logs/alerts.log
+  echo "High CPU Usage: $CPU_LOAD" | tee -a logs/alerts.log
 fi
 
 if (( $(echo "$MEM_AVAILABLE < 500" | bc -l) )); then
-  echo "⚠️ Low Memory: $MEM_AVAILABLE MB available" | tee -a logs/alerts.log
+  echo "Low Memory: $MEM_AVAILABLE MB available" | tee -a logs/alerts.log
 fi
 
-echo "✅ System Health Check Completed."
+echo " System Health Check Completed."
