@@ -1,0 +1,23 @@
+#!/usr/bin/expect -f
+
+# Set timeout for SSH connection
+set timeout 10
+
+# Get SSH details from user input
+set host [lindex $argv 0]
+set user [lindex $argv 1]
+set password [lindex $argv 2]
+
+# Start SSH session
+spawn ssh -p 2222 $user@$host
+
+# Expect password prompt and send password
+expect "assword:"
+send "$password\r"
+
+# Run system update and health check
+expect "$ "
+send "echo '🔍 Running System Health Check...'; uptime; free -h; df -h; sudo apt update -y; sudo apt upgrade -y; exit\r"
+
+# End interaction
+expect eof
