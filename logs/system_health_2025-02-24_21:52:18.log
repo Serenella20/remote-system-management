@@ -1,0 +1,41 @@
+spawn ssh -p 2222 codespace@127.0.0.1
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 6.5.0-1025-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+Last login: Mon Feb 24 21:51:28 2025 from 127.0.0.1
+[0;32m@Serenella20 [0m➜ [1;34m/workspaces/remote-system-management [0;36m([1;31mmain[0;36m) [0m$ echo '🔍 Running System Health Check...'; uptime; free -h; df -h; sudo apt update -y; sudo apt upgrade -y; exit
+🔍 Running System Health Check...
+ 21:52:23 up 50 min,  3 users,  load average: 1.75, 0.61, 0.41
+              total        used        free      shared  buff/cache   available
+Mem:          7.7Gi       1.5Gi       223Mi        64Mi       6.1Gi       5.9Gi
+Swap:            0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          32G   12G   19G  39% /
+tmpfs            64M     0   64M   0% /dev
+shm              64M  8.0K   64M   1% /dev/shm
+/dev/root        29G   13G   17G  43% /vscode
+/dev/sda1        44G   18G   25G  43% /tmp
+/dev/loop4       32G   12G   19G  39% /workspaces
+[33m0% [Working][0m            Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+[33m0% [Connecting to security.ubuntu.com (91.189.91.82)][0m                                                     Hit:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+                                                     Hit:3 http://security.ubuntu.com/ubuntu focal-security InRelease
+[33m0% [Waiting for headers] [Connected to packages.micro[0m                                                     Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+[33m0% [Connected to packages.microsoft.com (13.107.246.4[0m                                                     Get:5 https://dl.yarnpkg.com/debian stable InRelease [17.1 kB]
+[33m0% [Connecting to packagecloud.io] [Connected to pack[0m                                                     Hit:6 https://repo.anaconda.com/pkgs/misc/debrepo/conda stable InRelease
+[33m0% [Connecting to packagecloud.io (54.176.20.200)] [C[0m[33m0% [Connected to packagecloud.io (54.176.20.200)] [Co[0m                                                     Hit:7 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal InRelease
+[33m                                                     0% [Connected to packagecloud.io (54.176.20.200)][0m[33m                                                 0% [Waiting for headers][0m[33m                        0% [Working][0m[33m0% [Waiting for headers][0m                        Hit:8 https://packagecloud.io/github/git-lfs/ubuntu focal InRelease
+[33m                        0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m100% [Working][0m              Fetched 17.1 kB in 1s (14.6 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 3%Reading package lists... 3%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 40%Reading package lists... 50%Reading package lists... 50%Reading package lists... 64%Reading package lists... 64%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 81%Reading package lists... 81%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+All packages are up to date.
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 0sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 1sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 2sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 3sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 4sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 5sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 6sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 7sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)... 8sWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 38020 (apt)      
+Reading package lists... 0%                                                                              Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 3%Reading package lists... 3%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 50%Reading package lists... 50%Reading package lists... 64%Reading package lists... 64%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 81%Reading package lists... 81%Reading package lists... 83%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+Calculating upgrade... 0%Calculating upgrade... 10%Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+logout
+Connection to 127.0.0.1 closed.

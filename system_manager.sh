@@ -14,8 +14,9 @@ mkdir -p logs
 ./ssh_auto.exp $HOST $USER $PASSWORD | tee -a $LOG_FILE
 
 # Extract key system stats from log
-CPU_LOAD=$(grep "load average" $LOG_FILE | awk '{print $10}')
+CPU_LOAD=$(grep "load average" $LOG_FILE | awk '{print $10}' | tr -d ',')
 MEM_AVAILABLE=$(grep "Mem:" $LOG_FILE | awk '{print $7}')
+
 
 echo "System Health Summary:"
 echo "CPU Load: $CPU_LOAD"

@@ -1,0 +1,8 @@
+spawn ssh -p 2222 codespace@127.0.0.1
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 6.5.0-1025-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+Last login: Mon Feb 24 21:42:30 2025 from 127.0.0.1
+[0;32m@Serenella20 [0m➜ [1;34m/workspaces/remote-system-management [0;36m([1;31mmain[0;36m) [0m$ ⚠️ ERROR: SSH connection timed out!

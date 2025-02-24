@@ -1,0 +1,206 @@
+spawn ssh -p 2222 codespace@127.0.0.1
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 6.5.0-1025-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+Last login: Mon Feb 24 21:50:31 2025 from 127.0.0.1
+[0;32m@Serenella20 [0m➜ [1;34m/workspaces/remote-system-management [0;36m([1;31mmain[0;36m) [0m$ echo '🔍 Running System Health Check...'; uptime; free -h; df -h; sudo apt update -y; sudo apt upgrade -y; exit
+🔍 Running System Health Check...
+ 21:51:29 up 50 min,  3 users,  load average: 0.14, 0.17, 0.26
+              total        used        free      shared  buff/cache   available
+Mem:          7.7Gi       1.4Gi       204Mi        64Mi       6.1Gi       6.0Gi
+Swap:            0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          32G   11G   20G  36% /
+tmpfs            64M     0   64M   0% /dev
+shm              64M  8.0K   64M   1% /dev/shm
+/dev/root        29G   13G   17G  43% /vscode
+/dev/sda1        44G   18G   25G  43% /tmp
+/dev/loop4       32G   11G   20G  36% /workspaces
+[33m0% [Working][0m            Hit:1 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal InRelease
+[33m0% [Waiting for headers] [Connecting to security.ubun[0m                                                     Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+[33m0% [Waiting for headers] [Connecting to security.ubun[0m                                                     Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+[33m0% [Waiting for headers] [Connecting to security.ubun[0m                                                     Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+[33m0% [Connecting to security.ubuntu.com (185.125.190.81[0m                                                     Get:5 https://dl.yarnpkg.com/debian stable InRelease [17.1 kB]
+[33m0% [Connecting to security.ubuntu.com (185.125.190.81[0m[33m0% [Connecting to security.ubuntu.com (185.125.190.81[0m[33m                                                     0% [Waiting for headers] [Waiting for headers][0m                                              Hit:6 https://repo.anaconda.com/pkgs/misc/debrepo/conda stable InRelease
+[33m                                              0% [Waiting for headers][0m                        Hit:7 http://security.ubuntu.com/ubuntu focal-security InRelease
+[33m                        0% [Working][0m[33m0% [Working][0m[33m0% [Connecting to packagecloud.io (54.176.20.200)][0m[33m                                                  0% [Connected to packagecloud.io (54.176.20.200)][0m[33m0% [Connected to packagecloud.io (54.176.20.200)][0m[33m                                                 0% [Waiting for headers][0m[33m                        0% [Working][0m[33m0% [Connecting to d3fo0g5hm7lbuv.cloudfront.net][0m                                                Hit:8 https://packagecloud.io/github/git-lfs/ubuntu focal InRelease
+[33m                                                0% [Working][0m[33m100% [Working][0m              Fetched 17.1 kB in 1s (18.0 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 3%Reading package lists... 3%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 50%Reading package lists... 50%Reading package lists... 64%Reading package lists... 64%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+60 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 3%Reading package lists... 3%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 36%Reading package lists... 50%Reading package lists... 50%Reading package lists... 64%Reading package lists... 64%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+Calculating upgrade... 0%Calculating upgrade... 10%Calculating upgrade... Done
+The following NEW packages will be installed:
+  unixodbc
+The following packages will be upgraded:
+  curl git-lfs libc-bin libc-dev-bin libc6 libc6-dbg
+  libc6-dev libc6-i386 libcap2 libcap2-bin
+  libcurl3-gnutls libcurl4 libcurl4-openssl-dev
+  libgnutls-dane0 libgnutls-openssl27
+  libgnutls28-dev libgnutls30 libgnutlsxx28
+  libgssapi-krb5-2 libgstreamer1.0-0 libharfbuzz0b
+  libjs-jquery libk5crypto3 libkrb5-3
+  libkrb5support0 libmysqlclient-dev
+  libmysqlclient21 libodbc1 libpython3.8
+  libpython3.8-dev libpython3.8-minimal
+  libpython3.8-stdlib libssl-dev libssl1.1
+  libtasn1-6 libtasn1-6-dev libxml2 libxml2-dev
+  linux-libc-dev locales moby-buildx moby-cli
+  moby-compose moby-containerd moby-engine odbcinst
+  odbcinst1debian2 openssl python3.8 python3.8-dev
+  python3.8-minimal rsync tzdata unixodbc-dev vim
+  vim-common vim-doc vim-runtime vim-tiny xxd
+60 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 253 MB of archives.
+After this operation, 62.2 MB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dbg amd64 2.31-0ubuntu9.17 [20.2 MB]
+[33m0% [1 libc6-dbg 0 B/20.2 MB 0%] [Waiting for headers][0m                                                     Get:2 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 odbcinst amd64 2.3.11-1 [21.3 kB]
+[33m0% [1 libc6-dbg 14.0 kB/20.2 MB 0%] [2 odbcinst 8192 [0m[33m                                                     0% [1 libc6-dbg 14.0 kB/20.2 MB 0%][0m                                   Get:3 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 unixodbc-dev amd64 2.3.11-1 [42.4 kB]
+[33m0% [1 libc6-dbg 14.0 kB/20.2 MB 0%] [3 unixodbc-dev 0[0m[33m1% [1 libc6-dbg 16.4 kB/20.2 MB 0%] [Waiting for head[0m                                                     Get:4 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 odbcinst1debian2 amd64 2.3.11-1 [99.8 kB]
+[33m1% [1 libc6-dbg 22.6 kB/20.2 MB 0%] [4 odbcinst1debia[0m[33m                                                     1% [1 libc6-dbg 28.3 kB/20.2 MB 0%][0m                                   Get:5 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 libodbc1 amd64 2.3.11-1 [486 kB]
+[33m1% [1 libc6-dbg 31.1 kB/20.2 MB 0%] [5 libodbc1 24.6 [0m[33m                                                     2% [1 libc6-dbg 42.5 kB/20.2 MB 0%][0m                                   Get:6 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 unixodbc amd64 2.3.11-1 [51.5 kB]
+[33m2% [1 libc6-dbg 42.5 kB/20.2 MB 0%] [6 unixodbc 51.5 [0m[33m2% [1 libc6-dbg 42.5 kB/20.2 MB 0%] [Waiting for head[0m                                                     Get:7 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 moby-buildx amd64 0.21.1-ubuntu20.04u1 [41.8 MB]
+[33m2% [1 libc6-dbg 42.5 kB/20.2 MB 0%] [7 moby-buildx 0 [0m                                                     Get:8 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 moby-cli amd64 27.5.1-ubuntu20.04u1 [17.9 MB]
+[33m22% [1 libc6-dbg 20.2 MB/20.2 MB 100%] [Connected to [0m[33m23% [Connected to packagecloud.io (54.176.20.200)] [8[0m                                                     Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-i386 amd64 2.31-0ubuntu9.17 [2726 kB]
+[33m23% [9 libc6-i386 1134 B/2726 kB 0%] [Connected to pa[0m[33m26% [Connected to packagecloud.io (54.176.20.200)] [8[0m                                                     Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.17 [2521 kB]
+[33m26% [10 libc6-dev 0 B/2521 kB 0%] [Connected to packa[0m[33m29% [Connected to packagecloud.io (54.176.20.200)] [8[0m                                                     Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.17 [71.8 kB]
+[33m29% [11 libc-dev-bin 0 B/71.8 kB 0%] [Connected to pa[0m[33m29% [Connected to packagecloud.io (54.176.20.200)] [8[0m                                                     Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-208.228 [1118 kB]
+[33m29% [12 linux-libc-dev 0 B/1118 kB 0%] [Connected to [0m[33m30% [Connected to packagecloud.io (54.176.20.200)] [8[0m                                                     Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6 amd64 2.31-0ubuntu9.17 [2721 kB]
+[33m30% [13 libc6 0 B/2721 kB 0%] [Connected to packagecl[0m[33m32% [Waiting for headers] [8 moby-cli 17.9 MB/17.9 MB[0m                                                     Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 locales all 2.31-0ubuntu9.17 [3868 kB]
+[33m32% [14 locales 0 B/3868 kB 0%] [Waiting for headers][0m                                                     Get:15 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 moby-compose amd64 2.33.1-ubuntu20.04u1 [20.6 MB]
+[33m33% [14 locales 0 B/3868 kB 0%] [Waiting for headers][0m[33m36% [14 locales 3868 kB/3868 kB 100%] [15 moby-compos[0m                                                     Get:17 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-bin amd64 2.31-0ubuntu9.17 [634 kB]
+[33m36% [17 libc-bin 328 kB/634 kB 52%] [15 moby-compose [0m[33m                                                     37% [15 moby-compose 6082 kB/20.6 MB 29%][0m                                         Get:18 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-dev amd64 3.8.10-0ubuntu1~20.04.15 [514 kB]
+[33m37% [18 python3.8-dev 0 B/514 kB 0%] [15 moby-compose[0m[33m                                                     37% [15 moby-compose 7196 kB/20.6 MB 35%][0m                                         Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-dev amd64 3.8.10-0ubuntu1~20.04.15 [3950 kB]
+[33m38% [19 libpython3.8-dev 0 B/3950 kB 0%] [15 moby-com[0m                                                     Get:16 https://packagecloud.io/github/git-lfs/ubuntu focal/main amd64 git-lfs amd64 3.6.1 [8497 kB]
+[33m40% [16 git-lfs 32.1 kB/8497 kB 0%] [19 libpython3.8-[0m[33m42% [16 git-lfs 1597 kB/8497 kB 19%] [15 moby-compose[0m                                                     Get:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.10-0ubuntu1~20.04.15 [1626 kB]
+[33m42% [16 git-lfs 1597 kB/8497 kB 19%] [20 libpython3.8[0m                                                     Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl-dev amd64 1.1.1f-1ubuntu2.24 [1586 kB]
+[33m44% [16 git-lfs 2670 kB/8497 kB 31%] [21 libssl-dev 3[0m                                                     Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.24 [1323 kB]
+[33m45% [16 git-lfs 2932 kB/8497 kB 35%] [22 libssl1.1 15[0m                                                     Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.10-0ubuntu1~20.04.15 [387 kB]
+[33m47% [16 git-lfs 4325 kB/8497 kB 51%] [23 python3.8 29[0m                                                     Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.15 [1675 kB]
+[33m48% [16 git-lfs 4898 kB/8497 kB 58%] [24 libpython3.8[0m[33m48% [16 git-lfs 5177 kB/8497 kB 61%] [24 libpython3.8[0m                                                     Get:25 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 moby-containerd amd64 1.7.25-ubuntu20.04u1 [58.9 MB]
+[33m48% [16 git-lfs 5177 kB/8497 kB 61%] [24 libpython3.8[0m                                                     Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.10-0ubuntu1~20.04.15 [1901 kB]
+[33m51% [16 git-lfs 6618 kB/8497 kB 78%] [26 python3.8-mi[0m                                                     Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.15 [720 kB]
+[33m53% [16 git-lfs 8109 kB/8497 kB 95%] [27 libpython3.8[0m[33m53% [27 libpython3.8-minimal 524 kB/720 kB 73%] [25 m[0m[33m                                                     54% [25 moby-containerd 5243 kB/58.9 MB 9%][0m                                           Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 rsync amd64 3.1.3-8ubuntu0.9 [323 kB]
+[33m54% [28 rsync 0 B/323 kB 0%] [25 moby-containerd 5243[0m[33m                                                     54% [25 moby-containerd 5421 kB/58.9 MB 9%][0m                                           Get:29 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgnutls28-dev amd64 3.6.13-2ubuntu1.12 [875 kB]
+[33m54% [29 libgnutls28-dev 0 B/875 kB 0%] [25 moby-conta[0m[33m                                                     55% [25 moby-containerd 6423 kB/58.9 MB 11%][0m                                            Get:30 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgnutls-openssl27 amd64 3.6.13-2ubuntu1.12 [29.8 kB]
+[33m55% [30 libgnutls-openssl27 0 B/29.8 kB 0%] [25 moby-[0m[33m                                                     55% [25 moby-containerd 6423 kB/58.9 MB 11%][0m                                            Get:31 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgnutlsxx28 amd64 3.6.13-2ubuntu1.12 [14.7 kB]
+[33m55% [31 libgnutlsxx28 0 B/14.7 kB 0%] [25 moby-contai[0m[33m                                                     56% [25 moby-containerd 6423 kB/58.9 MB 11%][0m                                            Get:32 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtasn1-6-dev amd64 4.16.0-2ubuntu0.1 [86.1 kB]
+[33m56% [32 libtasn1-6-dev 0 B/86.1 kB 0%] [25 moby-conta[0m[33m                                                     56% [25 moby-containerd 6423 kB/58.9 MB 11%][0m                                            Get:33 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtasn1-6 amd64 4.16.0-2ubuntu0.1 [38.6 kB]
+[33m56% [33 libtasn1-6 0 B/38.6 kB 0%] [25 moby-container[0m[33m                                                     56% [25 moby-containerd 6640 kB/58.9 MB 11%][0m                                            Get:34 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgnutls-dane0 amd64 3.6.13-2ubuntu1.12 [29.1 kB]
+[33m56% [34 libgnutls-dane0 0 B/29.1 kB 0%] [25 moby-cont[0m[33m                                                     57% [25 moby-containerd 6640 kB/58.9 MB 11%][0m                                            Get:35 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgnutls30 amd64 3.6.13-2ubuntu1.12 [829 kB]
+[33m57% [35 libgnutls30 0 B/829 kB 0%] [25 moby-container[0m[33m                                                     58% [25 moby-containerd 8864 kB/58.9 MB 15%][0m                                            Get:36 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcap2 amd64 1:2.32-1ubuntu0.2 [15.7 kB]
+[33m58% [36 libcap2 0 B/15.7 kB 0%] [25 moby-containerd 8[0m[33m                                                     58% [25 moby-containerd 8864 kB/58.9 MB 15%][0m                                            Get:37 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcap2-bin amd64 1:2.32-1ubuntu0.2 [26.2 kB]
+[33m58% [37 libcap2-bin 0 B/26.2 kB 0%] [25 moby-containe[0m[33m                                                     59% [25 moby-containerd 8864 kB/58.9 MB 15%][0m                                            Get:38 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxml2-dev amd64 2.9.10+dfsg-5ubuntu0.20.04.8 [736 kB]
+[33m59% [38 libxml2-dev 0 B/736 kB 0%] [25 moby-container[0m[33m                                                     60% [25 moby-containerd 9878 kB/58.9 MB 17%][0m                                            Get:39 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxml2 amd64 2.9.10+dfsg-5ubuntu0.20.04.8 [640 kB]
+[33m60% [39 libxml2 0 B/640 kB 0%] [25 moby-containerd 98[0m[33m                                                     60% [25 moby-containerd 10.9 MB/58.9 MB 19%][0m                                            Get:40 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssl amd64 1.1.1f-1ubuntu2.24 [621 kB]
+[33m60% [40 openssl 0 B/621 kB 0%] [25 moby-containerd 10[0m[33m                                                     61% [25 moby-containerd 12.1 MB/58.9 MB 21%][0m                                            Get:41 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 tzdata all 2024b-0ubuntu0.20.04.1 [299 kB]
+[33m61% [41 tzdata 0 B/299 kB 0%] [25 moby-containerd 12.[0m[33m                                                     62% [25 moby-containerd 12.1 MB/58.9 MB 21%][0m                                            Get:42 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim amd64 2:8.1.2269-1ubuntu5.31 [1241 kB]
+[33m62% [42 vim 0 B/1241 kB 0%] [25 moby-containerd 12.1 [0m[33m                                                     63% [25 moby-containerd 14.9 MB/58.9 MB 25%][0m                                            Get:43 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-tiny amd64 2:8.1.2269-1ubuntu5.31 [580 kB]
+[33m63% [43 vim-tiny 0 B/580 kB 0%] [25 moby-containerd 1[0m[33m                                                     64% [25 moby-containerd 14.9 MB/58.9 MB 25%][0m                                            Get:44 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-runtime all 2:8.1.2269-1ubuntu5.31 [5872 kB]
+[33m64% [44 vim-runtime 0 B/5872 kB 0%] [25 moby-containe[0m[33m                                                     69% [25 moby-containerd 24.2 MB/58.9 MB 41%][0m                                            Get:45 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xxd amd64 2:8.1.2269-1ubuntu5.31 [50.2 kB]
+[33m69% [45 xxd 0 B/50.2 kB 0%] [25 moby-containerd 24.2 [0m[33m                                                     69% [25 moby-containerd 24.2 MB/58.9 MB 41%][0m                                            Get:46 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-common all 2:8.1.2269-1ubuntu5.31 [85.2 kB]
+[33m69% [46 vim-common 0 B/85.2 kB 0%] [25 moby-container[0m[33m                                                     70% [25 moby-containerd 25.2 MB/58.9 MB 43%][0m                                            Get:47 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgssapi-krb5-2 amd64 1.17-6ubuntu4.8 [121 kB]
+[33m70% [47 libgssapi-krb5-2 0 B/121 kB 0%] [25 moby-cont[0m[33m                                                     70% [25 moby-containerd 25.2 MB/58.9 MB 43%][0m                                            Get:48 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5-3 amd64 1.17-6ubuntu4.8 [329 kB]
+[33m70% [48 libkrb5-3 0 B/329 kB 0%] [25 moby-containerd [0m[33m                                                     71% [25 moby-containerd 25.2 MB/58.9 MB 43%][0m                                            Get:49 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkrb5support0 amd64 1.17-6ubuntu4.8 [31.1 kB]
+[33m71% [49 libkrb5support0 0 B/31.1 kB 0%] [25 moby-cont[0m[33m                                                     71% [25 moby-containerd 25.2 MB/58.9 MB 43%][0m                                            Get:50 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libk5crypto3 amd64 1.17-6ubuntu4.8 [80.4 kB]
+[33m71% [50 libk5crypto3 0 B/80.4 kB 0%] [25 moby-contain[0m[33m                                                     72% [25 moby-containerd 25.4 MB/58.9 MB 43%][0m                                            Get:51 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4-openssl-dev amd64 7.68.0-1ubuntu2.25 [322 kB]
+[33m72% [51 libcurl4-openssl-dev 0 B/322 kB 0%] [25 moby-[0m[33m                                                     72% [25 moby-containerd 25.4 MB/58.9 MB 43%][0m                                            Get:52 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.25 [162 kB]
+[33m72% [52 curl 0 B/162 kB 0%] [25 moby-containerd 26.0 [0m[33m                                                     73% [25 moby-containerd 26.0 MB/58.9 MB 44%][0m                                            Get:53 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.25 [235 kB]
+[33m73% [53 libcurl4 0 B/235 kB 0%] [25 moby-containerd 2[0m[33m                                                     73% [25 moby-containerd 27.2 MB/58.9 MB 46%][0m                                            Get:54 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl3-gnutls amd64 7.68.0-1ubuntu2.25 [233 kB]
+[33m73% [54 libcurl3-gnutls 0 B/233 kB 0%] [25 moby-conta[0m[33m                                                     74% [25 moby-containerd 27.2 MB/58.9 MB 46%][0m                                            Get:55 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgstreamer1.0-0 amd64 1.16.3-0ubuntu1.2 [894 kB]
+[33m74% [55 libgstreamer1.0-0 0 B/894 kB 0%] [25 moby-con[0m[33m                                                     75% [25 moby-containerd 28.4 MB/58.9 MB 48%][0m                                            Get:56 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libharfbuzz0b amd64 2.6.4-1ubuntu4.3 [391 kB]
+[33m75% [56 libharfbuzz0b 0 B/391 kB 0%] [25 moby-contain[0m[33m                                                     75% [25 moby-containerd 29.1 MB/58.9 MB 49%][0m                                            Get:57 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjs-jquery all 3.3.1~dfsg-3ubuntu0.1 [329 kB]
+[33m75% [57 libjs-jquery 0 B/329 kB 0%] [25 moby-containe[0m[33m                                                     76% [25 moby-containerd 30.4 MB/58.9 MB 52%][0m                                            Get:58 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libmysqlclient-dev amd64 8.0.41-0ubuntu0.20.04.1 [1680 kB]
+[33m76% [58 libmysqlclient-dev 0 B/1680 kB 0%] [25 moby-c[0m[33m                                                     78% [25 moby-containerd 31.9 MB/58.9 MB 54%][0m                                            Get:59 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libmysqlclient21 amd64 8.0.41-0ubuntu0.20.04.1 [1302 kB]
+[33m78% [59 libmysqlclient21 0 B/1302 kB 0%] [25 moby-con[0m[33m                                                     79% [25 moby-containerd 33.8 MB/58.9 MB 57%][0m                                            Get:60 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 vim-doc all 2:8.1.2269-1ubuntu5.31 [2062 kB]
+[33m79% [60 vim-doc 0 B/2062 kB 0%] [25 moby-containerd 3[0m[33m                                                     82% [25 moby-containerd 39.1 MB/58.9 MB 66%][0m[33m                                            88% [Working][0m             Get:61 https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod focal/main amd64 moby-engine amd64 27.5.1-ubuntu20.04u1 [36.6 MB]
+[33m88% [61 moby-engine 0 B/36.6 MB 0%][0m[33m                                   100% [Working][0m              Fetched 253 MB in 2s (107 MB/s)
+Extracting templates from packages: 49%Extracting templates from packages: 98%Extracting templates from packages: 100%
+Preconfiguring packages ...
+
+7[0;12r8[1A(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 70287 files and directories currently installed.)
+Preparing to unpack .../0-libc6-dbg_2.31-0ubuntu9.17_amd64.deb ...
+7[13;0f[42m[30mProgress: [  0%][49m[39m [................................] 8Unpacking libc6-dbg:amd64 (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+Preparing to unpack .../1-libc6-i386_2.31-0ubuntu9.17_amd64.deb ...
+7[13;0f[42m[30mProgress: [  1%][49m[39m [................................] 8Unpacking libc6-i386 (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+Preparing to unpack .../2-libc6-dev_2.31-0ubuntu9.17_amd64.deb ...
+7[13;0f[42m[30mProgress: [  2%][49m[39m [................................] 8Unpacking libc6-dev:amd64 (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+Preparing to unpack .../3-libc-dev-bin_2.31-0ubuntu9.17_amd64.deb ...
+Unpacking libc-dev-bin (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+7[13;0f[42m[30mProgress: [  3%][49m[39m [#...............................] 8Preparing to unpack .../4-linux-libc-dev_5.4.0-208.228_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.4.0-208.228) over (5.4.0-202.222) ...
+7[13;0f[42m[30mProgress: [  4%][49m[39m [#...............................] 8Preparing to unpack .../5-libc6_2.31-0ubuntu9.17_amd64.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Unpacking libc6:amd64 (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+Setting up libc6:amd64 (2.31-0ubuntu9.17) ...
+7[13;0f[42m[30mProgress: [  5%][49m[39m [#...............................] 8debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 70270 files and directories currently installed.)
+Preparing to unpack .../locales_2.31-0ubuntu9.17_all.deb ...
+7[13;0f[42m[30mProgress: [  6%][49m[39m [#...............................] 8Unpacking locales (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+echo '🔍 Running System Health Check...'; uptime; free -h; df -h; sudo apt update -y; sudo apt upgrade -y; exit
+Preparing to unpack .../libc-bin_2.31-0ubuntu9.17_amd64.deb ...
+Unpacking libc-bin (2.31-0ubuntu9.17) over (2.31-0ubuntu9.16) ...
+7[13;0f[42m[30mProgress: [  7%][49m[39m [##..............................] 8Setting up libc-bin (2.31-0ubuntu9.17) ...
+7[13;0f[42m[30mProgress: [  8%][49m[39m [##..............................] 8(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 70270 files and directories currently installed.)
+Preparing to unpack .../00-python3.8-dev_3.8.10-0ubuntu1~20.04.15_amd64.deb ...
+Unpacking python3.8-dev (3.8.10-0ubuntu1~20.04.15) over (3.8.10-0ubuntu1~20.04.13) ...
+Preparing to unpack .../01-libpython3.8-dev_3.8.10-0ubuntu1~20.04.15_amd64.deb ...
+7[13;0f[42m[30mProgress: [  9%][49m[39m [###.............................] 8Unpacking libpython3.8-dev:amd64 (3.8.10-0ubuntu1~20.04.15) over (3.8.10-0ubuntu1~20.04.13) ...
+Preparing to unpack .../02-libpython3.8_3.8.10-0ubuntu1~20.04.15_amd64.deb ...
+7[13;0f[42m[30mProgress: [ 10%][49m[39m [###.............................] 8Unpacking libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.15) over (3.8.10-0ubuntu1~20.04.13) ...
+Preparing to unpack .../03-libssl-dev_1.1.1f-1ubuntu2.24_amd64.deb ...
+Unpacking libssl-dev:amd64 (1.1.1f-1ubuntu2.24) over (1.1.1f-1ubuntu2.23) ...
+7[13;0f[42m[30mProgress: [ 11%][49m[39m [###.............................] 8Preparing to unpack .../04-libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2.24) over (1.1.1f-1ubuntu2.23) ...
+7[13;0f[42m[30mProgress: [ 12%][49m[39m [###.............................] 8Preparing to unpack .../05-python3.8_3.8.10-0ubuntu1~20.04.15_amd64.deb ...
+Unpacking python3.8 (3.8.10-0ubuntu1~20.04.15) over (3.8.10-0ubuntu1~20.04.13) ...
+Preparing to unpack .../06-libpython3.8-stdlib_3.8.10-0ubuntu1~20.04.15_amd64.deb ...
+7[13;0f[42m[30mProgress: [ 13%][49m[39m [####............................] 8Unpacking libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.15) over (3.8.10-0ubuntu1~20.04.13) ...
+Preparing to unpack .../07-python3.8-minimal_3.8.10-0ubuntu1~20.04.15_amd64.deb ...
+7[13;0f[42m[30mProgress: [ 14%][49m[39m [####............................] 8Unpacking python3.8-minimal (3.8.10-0ubuntu1~20.04.15) over (3.8.10-0ubuntu1~20.04.13) ...
+Preparing to unpack .../08-libpython3.8-minimal_3.8.10-0ubuntu1~20.04.15_amd64.deb ...
+Unpacking libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.15) over (3.8.10-0ubuntu1~20.04.13) ...
+7[13;0f[42m[30mProgress: [ 15%][49m[39m [####............................] 8Preparing to unpack .../09-rsync_3.1.3-8ubuntu0.9_amd64.deb ...
+Unpacking rsync (3.1.3-8ubuntu0.9) over (3.1.3-8ubuntu0.7) ...
+7[13;0f[42m[30mProgress: [ 16%][49m[39m [#####...........................] 8Preparing to unpack .../10-libgnutls28-dev_3.6.13-2ubuntu1.12_amd64.deb ...
+Unpacking libgnutls28-dev:amd64 (3.6.13-2ubuntu1.12) over (3.6.13-2ubuntu1.11) ...
+7[13;0f[42m[30mProgress: [ 17%][49m[39m [#####...........................] 8Preparing to unpack .../11-libgnutls-openssl27_3.6.13-2ubuntu1.12_amd64.deb ...
+Unpacking libgnutls-openssl27:amd64 (3.6.13-2ubuntu1.12) over (3.6.13-2ubuntu1.11) ...
+Preparing to unpack .../12-libgnutlsxx28_3.6.13-2ubuntu1.12_amd64.deb ...
+7[13;0f[42m[30mProgress: [ 18%][49m[39m [#####...........................] 8Unpacking libgnutlsxx28:amd64 (3.6.13-2ubuntu1.12) over (3.6.13-2ubuntu1.11) ...
+Preparing to unpack .../13-libtasn1-6-dev_4.16.0-2ubuntu0.1_amd64.deb ...
+7[13;0f[42m[30mProgress: [ 19%][49m[39m [######..........................] 8Unpacking libtasn1-6-dev:amd64 (4.16.0-2ubuntu0.1) over (4.16.0-2) ...
+Preparing to unpack .../14-libtasn1-6_4.16.0-2ubuntu0.1_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.16.0-2ubuntu0.1) over (4.16.0-2) ...
+7[13;0f[42m[30mProgress: [ 20%][49m[39m [######..........................] 8Setting up libtasn1-6:amd64 (4.16.0-2ubuntu0.1) ...
+7[13;0f[42m[30mProgress: [ 21%][49m[39m [######..........................] 8(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 70270 files and directories currently installed.)
+Preparing to unpack .../libgnutls-dane0_3.6.13-2ubuntu1.12_amd64.deb ...
+Unpacking libgnutls-dane0:amd64 (3.6.13-2ubuntu1.12) over (3.6.13-2ubuntu1.11) ...
+Preparing to unpack .../libgnutls30_3.6.13-2ubuntu1.12_amd64.deb ...
+7[13;0f[42m[30mProgress: [ 22%][49m[39m [#######.........................] 8Unpacking libgnutls30:amd64 (3.6.13-2ubuntu1.12) over (3.6.13-2ubuntu1.11) ...
+Setting up libgnutls30:amd64 (3.6.13-2ubuntu1.12) ...
+7[13;0f[42m[30mProgress: [ 23%][49m[39m [#######.........................] 8(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 70270 files and directories currently installed.)
+Preparing to unpack .../00-libcap2_1%3a2.32-1ubuntu0.2_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.32-1ubuntu0.2) over (1:2.32-1ubuntu0.1) ...
+7[13;0f[42m[30mProgress: [ 24%][49m[39m [#######.........................] 8Preparing to unpack .../01-libcap2-bin_1%3a2.32-1ubuntu0.2_amd64.deb ...
+Unpacking libcap2-bin (1:2.32-1ubuntu0.2) over (1:2.32-1ubuntu0.1) ...
+7[13;0f[42m[30mProgress: [ 25%][49m[39m [########........................] 8Preparing to unpack .../02-libxml2-dev_2.9.10+dfsg-5ubuntu0.20.04.8_amd64.deb ...
+Unpacking libxml2-dev:amd64 (2.9.10+dfsg-5ubuntu0.20.04.8) over (2.9.10+dfsg-5ubuntu0.20.04.7) ...
+Preparing to unpack .../03-libxml2_2.9.10+dfsg-5ubuntu0.20.04.8_amd64.deb ...
+7[13;0f[42m[30mProgress: [ 26%][49m[39m [########........................] 8Unpacking libxml2:amd64 (2.9.10+dfsg-5ubuntu0.20.04.8) over (2.9.10+dfsg-5ubuntu0.20.04.7) ...
+Preparing to unpack .../04-openssl_1.1.1f-1ubuntu2.24_amd64.deb ...
+7[13;0f[42m[30mProgress: [ 27%][49m[39m [########........................] 8Unpacking openssl (1.1.1f-1ubuntu2.24) over (1.1.1f-1ubuntu2.23) ...
+Preparing to unpack .../05-tzdata_2024b-0ubuntu0.20.04.1_all.deb ...
+Unpacking tzdata (2024b-0ubuntu0.20.04.1) over (2024a-0ubuntu0.20.04.1) ...
+7[13;0f[42m[30mProgress: [ 28%][49m[39m [#########.......................] 8Preparing to unpack .../06-vim_2%3a8.1.2269-1ubuntu5.31_amd64.deb ...
+Unpacking vim (2:8.1.2269-1ubuntu5.31) over (2:8.1.2269-1ubuntu5.29) ...
+7[13;0f[42m[30mProgress: [ 29%][49m[39m
